@@ -14,12 +14,13 @@ For demonstration purposes, the prototype was constructed without a resistor to 
 ![Concept Image](Images%20%26%20Videos/Concept.jpeg)
 
 ### Schematic Diagram
-![Schematic Diagram](Images%20%26%20Videos/Diagram.jpeg)
+![Schematic Diagram](Images%20%26%20Videos/Diagram.jpg)
 
 ### Final Artifact
-![Final Artifact](Images%20%26%20Videos/Final_Artifact.jpeg)
+![Final Artifact](Images%20%26%20Videos/Final_Artifact.jpg)
 
 ### Video
+    TBA
 
 ### References
     - https://docs.sunfounder.com/projects/esp32-starter-kit/en/latest/arduino/basic_projects/ar_ac_buz.html were used to control the buzzer

@@ -1,6 +1,6 @@
 # CPSC599
-<hr>
 ### Assignment 0 Documentation
+<hr>
 
 # Instant Twinkle Project Documentation
 

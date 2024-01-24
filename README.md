@@ -1,5 +1,4 @@
-# CPSC599
-## Assignment 0 Documentation
+# CPSC599 Assignment Page
 <hr>
 
 ### A0 - Instant Twinkle

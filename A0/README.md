@@ -24,7 +24,7 @@ For demonstration purposes, the prototype was constructed without a resistor to 
 <img src="Images%20%26%20Videos/Final_Artifact.jpg" style="width: 50%; height: 50%"/>​
 
 ### Video
-    <iframe width="315" height="560"
+<iframe width="315" height="560"
 src="https://www.youtube.com/embed/H8TPVCMW5WQ"
 title="YouTube video player"
 frameborder="0"

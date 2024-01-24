@@ -14,7 +14,7 @@ For demonstration purposes, the prototype was constructed without a resistor to 
 ![Concept Image](Images%20%26%20Videos/Concept.jpeg)
 
 ### Schematic Diagram
-![Schematic Diagram](Images%20%26%20Videos/Diagram.jpg)
+<img src="Images%20%26%20Videos/Diagram.jpg" style="width: 50%; height: 50%"/>​
 
 ### Final Artifact
 ![Final Artifact](Images%20%26%20Videos/Final_Artifact.jpg)

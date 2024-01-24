@@ -3,7 +3,7 @@
 <hr>
 
 ### A0 - Instant Twinkle
-    - See [A0](https://github.com/PKDT-93/CPSC599/tree/main/A0)
+- See [A0](https://github.com/PKDT-93/CPSC599/tree/main/A0)
 
 <hr>
 

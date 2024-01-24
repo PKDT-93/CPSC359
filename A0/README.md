@@ -1,8 +1,8 @@
-# Instant Twinkle Project
+# Twinkle Button Project
 
 ## Documentation 
 
-This "Instant Twinkle" arduino project is a combination of using technology to make something whimsical, aimed at being a toy that delivers "instant gratification" at the push of a button. This innocent and harmless concept brings joy through simple interaction. An ESP32 Arduino device serves as the microcontroller for this interaction. When the button is pressed, a passive buzzer oscillates frequencies to the tune of "Twinkle Twinkle Little Star". Simultaneously, a yellow LED, connected to the circuit with a 250 ohm resistor, flashes in sync with each oscillation, aiming to resemble a miniature visual spectacle.
+This "Twinkle Button" arduino project is a combination of using technology to make something whimsical, aimed at being a toy that delivers "instant gratification" at the push of a button. This innocent and harmless concept brings joy through simple interaction. An ESP32 Arduino device serves as the microcontroller for this interaction. When the button is pressed, a passive buzzer oscillates frequencies to the tune of "Twinkle Twinkle Little Star". Simultaneously, a yellow LED, connected to the circuit with a 250 ohm resistor, flashes in sync with each oscillation, aiming to resemble a miniature visual spectacle.
 
 A key aesthetic feature of this project is the yellow LED, which is covered with a dark blue pen cap, punctured with four holes arranged in a crosshair pattern. This diffusion method is designed to soften and spread the LED’s light, making it less intense and akin to a dimly lit window at night. This is to resemble a dim star-like glow, which is to be appealing in low-light environments, such as during night time. 
 

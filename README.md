@@ -7,6 +7,4 @@
 <hr>
 
 ### A1 - Musical Seashells
-- See Project Repo: [A0]
-
-<hr>
+- See Project Repo: [A1](https://github.com/PKDT-93/CPSC599/tree/main/A1)

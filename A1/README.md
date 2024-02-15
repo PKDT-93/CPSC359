@@ -19,10 +19,10 @@ Although this project significantly diverged from its original vision, it retain
 <img src="Images/Diagram.png" style="width: 50%; height: 50%"/>​
 
 ### Final Artifact
-<img src="Images%20%26%20Videos/Final_Artifact.jpg" style="width: 50%; height: 50%"/>​
+<img src="Images/Final_Artifact.png" style="width: 50%; height: 50%"/>​
 
 ### Video
-[![Musical Seashells](https://img.youtube.com/vi/X3xYvU7gXgk?.jpg)](https://youtu.be/X3xYvU7gXgk?feature=shared)
+[![Musical Seashells](https://i3.ytimg.com/vi/X3xYvU7gXgk/maxresdefault.jpg)](https://youtu.be/X3xYvU7gXgk?feature=shared)
 
 <hr>
 

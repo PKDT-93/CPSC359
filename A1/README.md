@@ -27,16 +27,16 @@ Although this project significantly diverged from its original vision, it retain
 <hr>
 
 ### References
-    - https://docs.sunfounder.com/projects/esp32-starter-kit/en/latest/arduino/basic_projects/ar_pot.html#ar-potentiometer
-      - Potentiometer documentation
-    - https://github.com/lathoub/Arduino-BLE-MIDI?tab=readme-ov-file
-      - Arduino BLE-MIDI Transport Library
-    - https://github.com/FortySevenEffects/arduino_midi_library
-      - Arduino MIDI Library to send MIDI outputs to Garageband
-    - https://apps.apple.com/us/app/bluetooth-midi-connect/id1074606480?mt=12
-      - Bluetooth Midi Connect application by KORG, used to connect to BLE midi controllers on MacOS.
-    - https://www.apple.com/ca/mac/garageband/
-      - GarageBand for MacOS to play MIDI sounds
+1. "Potentiometer Documentation." *SunFounder*, docs.sunfounder.com/projects/esp32-starter-kit/en/latest/arduino/basic_projects/ar_pot.html#ar-potentiometer. Accessed 10 Feb. 2024.
+
+2. Lathoub. "Arduino BLE-MIDI Transport Library." *GitHub*, github.com/lathoub/Arduino-BLE-MIDI?tab=readme-ov-file. Accessed 13 Feb. 2024.
+
+3. FortySevenEffects. "Arduino MIDI Library." *GitHub*, github.com/FortySevenEffects/arduino_midi_library. Accessed 13 Feb. 2024.
+
+4. "Bluetooth MIDI Connect." *App Store*, apps.apple.com/us/app/bluetooth-midi-connect/id1074606480?mt=12. Accessed 13 Feb. 2024.
+
+5. "GarageBand for MacOS." *Apple*, www.apple.com/ca/mac/garageband/. Accessed 12 Feb. 2024.
+
 
 ### Components
     - ESP32 WROOM 32E

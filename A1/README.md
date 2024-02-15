@@ -15,7 +15,7 @@ Although this project significantly diverged from its original vision, it retain
 ### Concept Images
 ![Concept Image](Images/Concept.png)
 
-### Schematic Diagramß
+### Schematic Diagram
 <img src="Images/Diagram.png" style="width: 50%; height: 50%"/>​
 
 ### Final Artifact

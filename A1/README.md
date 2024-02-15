@@ -10,7 +10,7 @@ MIDI communication was achieved through the Arduino BLE-MIDI Transport library, 
 
 Although this project significantly diverged from its original vision, it retains the essence of a wearable musical instrument. Now reimagined as an interactive painting, it serves as a reminder of past travels, embodying the joy and memories associated with them. For future iterations, considering a sensor like the MPR121 over the AT42QT1070 would provide enhanced control over detected capacitance, promising a closer realization of the project's initial concept.
 
-<hr>ß
+<hr>
 
 ### Concept Images
 ![Concept Image](Images/Concept.png)
@@ -22,7 +22,7 @@ Although this project significantly diverged from its original vision, it retain
 <img src="Images%20%26%20Videos/Final_Artifact.jpg" style="width: 50%; height: 50%"/>​
 
 ### Video
-[![Musical Seashells](https://img.youtube.com/vi/X3xYvU7gXgk?/0.jpg)](https://youtu.be/X3xYvU7gXgk?feature=shared)
+[![Musical Seashells](https://img.youtube.com/vi/X3xYvU7gXgk?.jpg)](https://youtu.be/X3xYvU7gXgk?feature=shared)
 
 <hr>
 

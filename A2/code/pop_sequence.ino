@@ -28,9 +28,9 @@ float initialZ = 0;
 
 void setup(void) {
   Serial.begin(9600);
-  while (!Serial) delay(10);
-  lcd.init(); 
-  lcd.backlight();
+  while (!Serial) delay(10); // wait for serial port to connect. Needed for native USB
+  lcd.init(); // Initialize the LCD
+  lcd.backlight(); // Turn on the backlight
 
   // Set motor pins as outputs
   pinMode(enA, OUTPUT);
@@ -118,12 +118,11 @@ void updateDisplay() {
       hour += minute / 60;
       minute %= 60;
     }
-    // Ensure hour is in 0-23 range
-    hour %= 24; 
+    hour %= 24; // Ensure hour is in 0-23 range
 
     sprintf(newTimeStr, "Study: %02d:%02d", hour, minute); // Format the new time string
-    lcd.clear(); 
-    lcd.setCursor(0, 0);
+    lcd.clear(); // Clear the display to update it
+    lcd.setCursor(0, 0); // Optionally, display the original time on the first line
     lcd.print("Time: " + dateTime); // Display the original dateTime
     lcd.setCursor(0, 1); // Set cursor to the second line for the new time
     lcd.print(newTimeStr); // Display the new time string

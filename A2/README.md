@@ -21,7 +21,7 @@ By integrating MPU-6050 accelerometer and gyroscope sensor, attached to the back
 ![Concept Image](Images/balloon2.png)
 
 ### Schematic Diagram
-<img src="Images/Diagram.png" style="width: 50%; height: 50%"/>​
+<img src="Images/A2_schem.png" style="width: 50%; height: 50%"/>​
 
 ### Final Artifact
 <img src="Images/Final_Artifact.png" style="width: 50%; height: 50%"/>​

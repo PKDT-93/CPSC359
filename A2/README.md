@@ -27,7 +27,7 @@ By integrating MPU-6050 accelerometer and gyroscope sensor, attached to the back
 <img src="Images/artifact.png" style="width: 50%; height: 50%"/>​
 
 ### Video
-[![Musical Seashells](https://i3.ytimg.com/vi/HfpjJ8q1j/maxresdefault.jpg)](https://youtu.be/HfpjJ8q1j-s?si=eInrsclpJU86aaP6)
+[![The PopSequence](https://i3.ytimg.com/vi/HfpjJ8q1j-s/maxresdefault.jpg)](https://www.youtube.com/watch?v=HfpjJ8q1j-s)
 <hr>
 
 ### References

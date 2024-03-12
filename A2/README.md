@@ -32,23 +32,24 @@ By integrating MPU-6050 accelerometer and gyroscope sensor, attached to the back
 <hr>
 
 ### References
-1. "Potentiometer Documentation." *SunFounder*, docs.sunfounder.com/projects/esp32-starter-kit/en/latest/arduino/basic_projects/ar_pot.html#ar-potentiometer. Accessed 10 Feb. 2024.
-
-2. Lathoub. "Arduino BLE-MIDI Transport Library." *GitHub*, github.com/lathoub/Arduino-BLE-MIDI?tab=readme-ov-file. Accessed 13 Feb. 2024.
-
-3. FortySevenEffects. "Arduino MIDI Library." *GitHub*, github.com/FortySevenEffects/arduino_midi_library. Accessed 13 Feb. 2024.
-
-4. "Bluetooth MIDI Connect." *App Store*, apps.apple.com/us/app/bluetooth-midi-connect/id1074606480?mt=12. Accessed 13 Feb. 2024.
-
-5. "GarageBand for MacOS." *Apple*, www.apple.com/ca/mac/garageband/. Accessed 12 Feb. 2024.
+1. "I2C LCD1602." SunFounder ESP32 Starter Kit Documentation, SunFounder, https://docs.sunfounder.com/projects/esp32-starter-kit/en/latest/components/component_i2c_lcd.html. Accessed 10 Mar. 2024.
+2. "Digital Input Pull-Up." Arduino, https://docs.arduino.cc/tutorials/generic/digital-input-pullup. Accessed 8 Mar. 2024.
+"Arduino and MPU6050 Accelerometer and Gyroscope Tutorial." HowToMechatronics, 3. https://howtomechatronics.com/tutorials/arduino/arduino-and-mpu6050-accelerometer-and-gyroscope-tutorial/. Accessed 12 Mar. 2024.
+4. "ARDUINO + VACUUM PUMP EXPLAINED #vacuumpump #arduino #esp32." YouTube, uploaded by [Mikael Abehsera], 12 Mar. 2024, https://www.youtube.com/watch?v=UkuoB51Vbrs.
 
 
 ### Components
-    - ESP32 WROOM 32E
-    - Breadboard
+    - Arduino Uno R3
+    - 2 Bread Boards
     - Jumper Pins
-    - AT42QT1070 Capacitive Touch Sensor
-    - 220 OHM Resistor
-    - 10-12K Resistors x4
-    - Potentiometer
-    - LED pins x 4
+    - MPU 6050 
+    - 1 x 100 OHM Resistor
+    - 1 x 10K OHM Resistor
+    - 12V Vacuum Pump
+    - L298N Motor Driver Controller
+    - Plastic Tubing
+    - I2C Display
+    - Balloons 
+    - 12V AC Adapter
+    - AC Barrel Tube to Bare Wire adapter 
+

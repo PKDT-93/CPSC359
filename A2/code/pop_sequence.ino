@@ -24,10 +24,12 @@ bool showTime = false;
 // Store initial Z-axis acceleration
 float initialZ = 0;
 
-void setup(void) {
+void setup(void)
+{
   Serial.begin(9600);
-  while (!Serial) delay(10); // wait for serial port to connect. Needed for native USB
-  lcd.init(); // Initialize the LCD
+  while (!Serial)
+    delay(10);     // wait for serial port to connect. Needed for native USB
+  lcd.init();      // Initialize the LCD
   lcd.backlight(); // Turn on the backlight
 
   // Set motor pins as outputs
@@ -39,9 +41,11 @@ void setup(void) {
   pinMode(buttonPin, INPUT_PULLUP);
 
   // Initialize the MPU6050
-  if (!mpu.begin()) {
+  if (!mpu.begin())
+  {
     Serial.println("Failed to find MPU6050 chip");
-    while (1) {
+    while (1)
+    {
       delay(10);
     }
   }
@@ -50,7 +54,7 @@ void setup(void) {
   mpu.setAccelerometerRange(MPU6050_RANGE_8_G);
   mpu.setGyroRange(MPU6050_RANGE_500_DEG);
   mpu.setFilterBandwidth(MPU6050_BAND_21_HZ);
-  
+
   delay(1000); // Let sensor stabilize
 
   // Get an initial reading from the MPU6050
@@ -61,25 +65,32 @@ void setup(void) {
   Serial.println("MPU6050 configuration done.");
 }
 
-void controlMotor() {
-  if (showTime) { // Check if the new time is displayed
+void controlMotor()
+{
+  if (showTime)
+  { // Check if the new time is displayed
     sensors_event_t a, g, temp;
     mpu.getEvent(&a, &g, &temp);
     float deltaZ = a.acceleration.z - initialZ; // Calculate the change in Z-axis acceleration
-    float movementThreshold = 0.2; // Define a threshold for movement
+    float movementThreshold = 0.2;              // Define a threshold for movement
 
     // If the change in Z-axis acceleration exceeds the threshold, turn the motor on
-    if (abs(deltaZ) > movementThreshold) {
+    if (abs(deltaZ) > movementThreshold)
+    {
       digitalWrite(in1, HIGH);
       digitalWrite(in2, LOW);
       analogWrite(enA, 255); // Run motor at full speed
-    } else {
+    }
+    else
+    {
       // Otherwise, stop the motor
       digitalWrite(in1, LOW);
       digitalWrite(in2, LOW);
       analogWrite(enA, 0); // Stop the motor
     }
-  } else {
+  }
+  else
+  {
     // If the new time is not displayed, ensure the motor is off
     digitalWrite(in1, LOW);
     digitalWrite(in2, LOW);
@@ -87,15 +98,17 @@ void controlMotor() {
   }
 }
 
-
-void loop() {
+void loop()
+{
   String dateTime = ""; // Holds the current time string read from serial
-  if (Serial.available() > 0) {
+  if (Serial.available() > 0)
+  {
     dateTime = Serial.readStringUntil('\n');
   }
 
   // Update the LCD display with the current time
-  if (dateTime.length() > 0) {
+  if (dateTime.length() > 0)
+  {
     updateDisplay(dateTime);
   }
 
@@ -104,38 +117,44 @@ void loop() {
   delay(100); // Loop delay for stability
 }
 
-void checkButton(String dateTime) {
+void checkButton(String dateTime)
+{
   int reading = digitalRead(buttonPin);
 
-  if (reading != lastButtonState) {
+  if (reading != lastButtonState)
+  {
     delay(50); // Debounce delay
-    if (reading == LOW && lastButtonState == HIGH) { // Button press detected
-      showTime = !showTime; // Toggle the showTime flag
+    if (reading == LOW && lastButtonState == HIGH)
+    {                          // Button press detected
+      showTime = !showTime;    // Toggle the showTime flag
       updateDisplay(dateTime); // Update display whenever the button is pressed
     }
     lastButtonState = reading; // Update the lastButtonState
   }
 }
 
-void updateDisplay(String dateTime) {
+void updateDisplay(String dateTime)
+{
   lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print("Time: " + dateTime);
 
-  if (showTime && dateTime.length() > 0) {
+  if (showTime && dateTime.length() > 0)
+  {
     int hour = dateTime.substring(0, 2).toInt();
     int minute = dateTime.substring(3, 5).toInt();
 
     // Calculate the new time by adding 25 minutes
     minute += 25;
-    if (minute >= 60) {
+    if (minute >= 60)
+    {
       hour += minute / 60;
       minute %= 60;
     }
     hour %= 24; // Ensure hour is in 0-23 range
 
-    sprintf(newTimeStr, "New: %02d:%02d", hour, minute); // Format the new time string
-    lcd.setCursor(0, 1); // Set cursor to the second line for the new time
-    lcd.print(newTimeStr); // Display the new time string
+    sprintf(newTimeStr, "Target: %02d:%02d", hour, minute); // Format the new time string
+    lcd.setCursor(0, 1);                                    // Set cursor to the second line for the new time
+    lcd.print(newTimeStr);                                  // Display the new time string
   }
 }

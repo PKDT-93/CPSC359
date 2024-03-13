@@ -20,8 +20,6 @@ int buttonPin = 2;
 
 // Variable to track if the new time should be displayed
 bool showTime = false;
-bool timeCaptured = false; // Flag to check if the time has been captured
-String dateTime = ""; // Global scope to capture the time only once
 
 // Store initial Z-axis acceleration
 float initialZ = 0;
@@ -64,51 +62,67 @@ void setup(void) {
 }
 
 void controlMotor() {
-  sensors_event_t a, g, temp;
-  mpu.getEvent(&a, &g, &temp);
-  float deltaZ = a.acceleration.z - initialZ; // Calculate the change in Z-axis acceleration
-  float movementThreshold = 0.2; // Define a threshold for movement
+  if (showTime) { // Check if the new time is displayed
+    sensors_event_t a, g, temp;
+    mpu.getEvent(&a, &g, &temp);
+    float deltaZ = a.acceleration.z - initialZ; // Calculate the change in Z-axis acceleration
+    float movementThreshold = 0.2; // Define a threshold for movement
 
-  // If the change in Z-axis acceleration exceeds the threshold, turn the motor on
-  if (abs(deltaZ) > movementThreshold) {
-    digitalWrite(in1, HIGH);
-    digitalWrite(in2, LOW);
-    analogWrite(enA, 255); // Run motor at full speed
+    // If the change in Z-axis acceleration exceeds the threshold, turn the motor on
+    if (abs(deltaZ) > movementThreshold) {
+      digitalWrite(in1, HIGH);
+      digitalWrite(in2, LOW);
+      analogWrite(enA, 255); // Run motor at full speed
+    } else {
+      // Otherwise, stop the motor
+      digitalWrite(in1, LOW);
+      digitalWrite(in2, LOW);
+      analogWrite(enA, 0); // Stop the motor
+    }
   } else {
-    // Otherwise, stop the motor
+    // If the new time is not displayed, ensure the motor is off
     digitalWrite(in1, LOW);
     digitalWrite(in2, LOW);
     analogWrite(enA, 0); // Stop the motor
   }
 }
 
+
 void loop() {
-  checkButton();
-  updateDisplay();
+  String dateTime = ""; // Holds the current time string read from serial
+  if (Serial.available() > 0) {
+    dateTime = Serial.readStringUntil('\n');
+  }
+
+  // Update the LCD display with the current time
+  if (dateTime.length() > 0) {
+    updateDisplay(dateTime);
+  }
+
+  checkButton(dateTime); // Pass dateTime to checkButton to toggle display
   controlMotor();
   delay(100); // Loop delay for stability
 }
 
-void checkButton() {
+void checkButton(String dateTime) {
   int reading = digitalRead(buttonPin);
 
   if (reading != lastButtonState) {
     delay(50); // Debounce delay
     if (reading == LOW && lastButtonState == HIGH) { // Button press detected
-      if (!timeCaptured && Serial.available() > 0) {
-        // Capture the current time once
-        dateTime = Serial.readStringUntil('\n');
-        timeCaptured = true;
-      }
       showTime = !showTime; // Toggle the showTime flag
+      updateDisplay(dateTime); // Update display whenever the button is pressed
     }
     lastButtonState = reading; // Update the lastButtonState
   }
 }
 
-void updateDisplay() {
-  if (timeCaptured && showTime && dateTime.length() > 0) {
-    // Process and display the new time only if the time has been captured and showTime is true
+void updateDisplay(String dateTime) {
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("Time: " + dateTime);
+
+  if (showTime && dateTime.length() > 0) {
     int hour = dateTime.substring(0, 2).toInt();
     int minute = dateTime.substring(3, 5).toInt();
 
@@ -120,15 +134,8 @@ void updateDisplay() {
     }
     hour %= 24; // Ensure hour is in 0-23 range
 
-    sprintf(newTimeStr, "Study: %02d:%02d", hour, minute); // Format the new time string
-    lcd.clear(); // Clear the display to update it
-    lcd.setCursor(0, 0); // Optionally, display the original time on the first line
-    lcd.print("Time: " + dateTime); // Display the original dateTime
+    sprintf(newTimeStr, "New: %02d:%02d", hour, minute); // Format the new time string
     lcd.setCursor(0, 1); // Set cursor to the second line for the new time
     lcd.print(newTimeStr); // Display the new time string
-  } else if (!showTime) {
-    lcd.clear(); // Clear the entire display
-    lcd.setCursor(0, 0); // Optionally, redisplay the original time on the first line
-    lcd.print("Time: " + dateTime); // Display the original dateTime
   }
 }

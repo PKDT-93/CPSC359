@@ -59,10 +59,13 @@ The difficulty of this iteration comes from assembling 3D printed parts into one
 - Arduino Uno R3
 - 2 Breadboards
 - Jumper Pins
+- 3 Buttons
+- 3D Printer + Filament
+- Heated Shrink Wrap
 - MPU 6050 
-- 1 x 100 Ohm Resistor
-- 1 x 10K Ohm Resistor
+- 6 x 240 Ohm Resistors
 - 12V Vacuum Pump
+- 2 Position 3 Way DC12V 0.19A Solenoid Valve
 - L298N Motor Driver Controller
 - Plastic Tubing
 - I2C Display

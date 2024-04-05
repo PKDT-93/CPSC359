@@ -37,14 +37,13 @@ The difficulty of this iteration comes from assembling 3D printed parts into one
 ---
 
 ### Concept Images
-![Concept Image](Images/balloon1.png)
-![Concept Image](Images/balloon2.png)
+![Concept Image](Images/concept.png)
 
 ### Schematic Diagram
-<img src="Images/A2_schem.png" width="50%" height="50%"/>
+<img src="Images/A3_schem.png" width="50%" height="50%"/>
 
 ### Final Artifact
-<img src="Images/artifact.png" width="50%" height="50%"/>
+<img src="Images/IMG_6945.jpeg" width="50%" height="50%"/>
 
 ### Video
 [![The PopSequence](https://i3.ytimg.com/vi/HfpjJ8q1j-s/maxresdefault.jpg)](https://www.youtube.com/watch?v=HfpjJ8q1j-s)

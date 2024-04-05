@@ -46,7 +46,7 @@ The difficulty of this iteration comes from assembling 3D printed parts into one
 <img src="Images/IMG_6945.jpeg" width="50%" height="50%"/>
 
 ### Video
-[![The PopSequence](https://i3.ytimg.com/vi/KxaQwztsKk8AL1dc/maxresdefault.jpg)](https://youtu.be/vfds8kuzxuc?si=KxaQwztsKk8AL1dc)
+[![The PopSequence](https://i3.ytimg.com/vi/vfds8kuzxuc/maxresdefault.jpg)](https://youtu.be/vfds8kuzxuc?si=KxaQwztsKk8AL1dc)
 ---
 
 ### References

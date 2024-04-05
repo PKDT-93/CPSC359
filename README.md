@@ -9,3 +9,6 @@
 
 ### A2 - The PopSequence
 - See Project Repo: [A2](https://github.com/PKDT-93/CPSC599/tree/main/A2)
+
+### A2 - The PopSequence v2.0
+- See Project Repo: [A2](https://github.com/PKDT-93/CPSC599/tree/main/A3)
